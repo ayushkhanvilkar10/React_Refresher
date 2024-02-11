@@ -32,6 +32,9 @@ const WeatherDisplay = () =>  {
     // If the response is not ok then control goes to the catch block directly 
     // If the response is ok then response.json() is processed in the then block
 
+    // In the below block of code 'response.json' returns a promise.
+    // The promise that is returned by it is resolved in the then block that follows it.
+
     const fetchWeatherData = () => {
         return new Promise((resolve,reject)=> {
             fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=London&aqi=no`)
